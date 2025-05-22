@@ -36,7 +36,7 @@ In this lab we will be using Webex for making calls into the Contact Center and 
 
 > Log into Webex on your PC:
 >
-> - Username: <copy><w class="login">Provided by proctor</w></copy>
+> - Username: <copy><w class="Admin username">Provided by proctor</w></copy>
 > - Password: <copy><w class="PW">Provided by proctor</w></copy>
 > 
 
@@ -68,4 +68,4 @@ In this lab we will be using Webex for making calls into the Contact Center and 
 
 ---
 
-<script src="../template_assets/newLoad.js"></script>
+<script src="/template_assets/newLoad.js"></script>
