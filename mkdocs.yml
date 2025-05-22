@@ -44,6 +44,7 @@ extra_css:
 extra_javascript:
   - js/copy-button.js
   - js/attendee-id.js
+  - docs/template_assets/newLoad.js
 plugins:
   - search
   # - with-pdf:
@@ -96,7 +97,7 @@ markdown_extensions:
   - pymdownx.tilde
 nav:
   - Home: index.md
-  - Test1234: ./main/test1234.md
+  - Test1234: test1234.md
   - Getting Started:
       - Welcome: welcome.md
       - Overview: overview.md
