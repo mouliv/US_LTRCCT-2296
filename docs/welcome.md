@@ -18,4 +18,4 @@ This advanced lab is designed to empower you with the skills to craft exceptiona
 
 
 
-<script src="/template_assets/newLoad.js"></script>
+<script src="template_assets/newLoad.js"></script>

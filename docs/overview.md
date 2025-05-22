@@ -68,4 +68,4 @@ In this lab we will be using Webex for making calls into the Contact Center and 
 
 ---
 
-<script src="/template_assets/newLoad.js"></script>
+<script src="template_assets/newLoad.js"></script>
