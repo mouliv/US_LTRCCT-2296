@@ -101,13 +101,16 @@ nav:
   - Getting Started:
       - Welcome: welcome.md
       - Overview: overview.md
+  - Core:
       - Lab 1: coreLab1.md
       - Lab 2: coreLab2.md
       - Lab 3: coreLab3.md
+      - Lab 4: coreLab4.md
+      - Lab 5: coreLab5.md
       # - Lab Overview: ./main/overview.md
-      - Getting to know your environment: ./main/PreRequisites.md
-      - Chrome and Webex App Setup: ./main/Browser_and_Desktop_Setup.md 
-      - Choose Your Adventure: ./main/Choose_Your_Adventure.md
+      # - Getting to know your environment: ./main/PreRequisites.md
+      # - Chrome and Webex App Setup: ./main/Browser_and_Desktop_Setup.md 
+      # - Choose Your Adventure: ./main/Choose_Your_Adventure.md
       ## - Flow Designer Overview [To be moved to presentation]: ./main/FlowDesignerOverview.md
   # - CORE TRACK:
   #     - Lab Guide:

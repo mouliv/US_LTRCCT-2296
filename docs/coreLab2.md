@@ -12,7 +12,7 @@ In this section of the lab we will continue building and testing together.  We w
 
 ## Build
 
-### Open flow CL<w class="POD">_core</w>
+### Open flow <copy>CL<w class="POD"></w>_core</copy>
 > Toggle the Edit switch on
 >
 ---
