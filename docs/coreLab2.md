@@ -77,7 +77,7 @@ In this section of the lab we will continue building and testing together.  We w
 ### Edit the Play Music node
 > Start Offset: <copy>`{{counter * 30}}`</copy>
 >
-> Music Duration: 30
+> Music Duration: <copy>30</copy>
 >
 ---
 
