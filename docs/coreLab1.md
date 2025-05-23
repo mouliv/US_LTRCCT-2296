@@ -2,7 +2,7 @@
 
 ## Learning Objectives
 
-In this section of the lab we will building and testing together as we explore the flow builder as well as other areas of the Webex Contact Center. We will start by creating a basic flow from scratch then add functionality as we learn about new features and concepts.  If you are already a seasoned veteran and complete the sections before the rest of teh group, please feel free to help others as we often learn more by teaching.
+In this section of the lab we will building and testing together as we explore the flow builder as well as other areas of the Webex Contact Center. We will start by creating a basic flow from scratch then add functionality as we learn about new features and concepts.  If you are already a seasoned veteran and complete the sections before the rest of the group, please feel free to help others as we often learn more by teaching.
 
 ## Build
 

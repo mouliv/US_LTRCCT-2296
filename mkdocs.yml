@@ -103,6 +103,7 @@ nav:
       - Overview: overview.md
       - Lab 1: coreLab1.md
       - Lab 2: coreLab2.md
+      - Lab 3: coreLab3.md
       # - Lab Overview: ./main/overview.md
       - Getting to know your environment: ./main/PreRequisites.md
       - Chrome and Webex App Setup: ./main/Browser_and_Desktop_Setup.md 
@@ -132,7 +133,7 @@ nav:
   #           - "Mission 3: CallBack on Global Error": ./main/CallbackTrack_Mission3.md
   #           - "Mission 4: Preventing Callback duplication": ./main/CallbackTrack_Mission4.md
   #     - Conclusion: ./main/CallbackTrack_Conclusion.md
-  # - AI AGENT TRACK:
+  - AI AGENT TRACK:
       - Lab Guide:
             - "Mission 1: AI in Action (Autonomous Agent)": ./main/AIAgentTrack_Mission1.md
             - "Mission 2: AI in Action (Scripted Agent)": ./main/AIAgentTrack_Mission2.md

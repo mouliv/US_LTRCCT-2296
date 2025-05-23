@@ -7,7 +7,7 @@ In this section of the lab we will continue building and testing together.  We w
 ## New Elements
  - Variables
  - Pebble Templates
- - FLow Logic
+ - Flow Logic
 
 
 ## Build
@@ -22,8 +22,7 @@ In this section of the lab we will continue building and testing together.  We w
 >
 > Type: Integer
 >
-> Default Value: empty
-
+> Default Value: <copy>0</copy>
 ---
 
 ### Add a Set Variable node
