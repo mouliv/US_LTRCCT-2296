@@ -12,7 +12,7 @@ In this section of the lab you are going to choose your own adventure from the l
 ### [Last Agent Routing Based on (Simulated) Auto CSAT](LARbasedOnCSAT.md)
 > A common request for returning customers calling into a contact center is to work with the last person with which they had a good experience. This may be because they are already familiar with what the customer needs or it may just be that the customer is familiar with the agent and enjoyed their last interaction. With the new Auto CSAT feature in the Webex Contact Center we can automatically account for this request and route to the last agent which had a high Auto CSAT with the customer. 
 
-### Dial-A-Dad-Joke
+### [Dial-A-Dad-Joke](dadJoke.md)
 > Not every learning exercise needs to be overly serious.  This exercise is a fun way to explore the basics of and http request, JSON, text-to-speech, and basic flow logic, all while getting a little giggle.
 
 ### Prevent Duplicate Callback Requests Using a Subflow
