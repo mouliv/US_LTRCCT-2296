@@ -1,4 +1,4 @@
-# Lab 1 - Routing Returning Callers
+# Routing Returning Callers
 
 ## Story
 > When a customer calls back into the contact center within ten minutes of their last call ending, we can assume there was a dropped call, missed callback, or they need additional assistance from their last interaction.  We are going to prioritize their call in the queue so that they can finish their business.
