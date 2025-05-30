@@ -16,6 +16,7 @@ In this section of the lab you are going to choose your own adventure from the l
 ### [Multiple Lines of Business Using the Same Flow](multiLOB.md)
 > You do not always need to create a new flow for each line of business in the contact center, instead you can often reuse your flow logic and account for the differences including different queues and wait treatments.  In this lab you will be adding a new line of business to the CL<w class="POD"></w>_core</copy> flow.
 
+
 ### [Routing Returning Callers](returningCaller.md)
 > When a customer calls back into the contact center within ten minutes of their last call ending, we can assume there was a dropped call, missed callback, or they need additional assistance from their last interaction. We are going to prioritize their call in the queue so that they can finish their business.
 
@@ -23,16 +24,15 @@ In this section of the lab you are going to choose your own adventure from the l
 ### [Last Agent Routing Based on (Simulated) Auto CSAT](LARbasedOnCSAT.md)
 > A common request for returning customers calling into a contact center is to work with the last person with which they had a good experience. This may be because they are already familiar with what the customer needs or it may just be that the customer is familiar with the agent and enjoyed their last interaction. With the new Auto CSAT feature in the Webex Contact Center we can automatically account for this request and route to the last agent which had a high Auto CSAT with the customer. 
 
+### Emergency Close
+>
+
+
+### Recording a message to be played in your flow by making an inbound call
+>
 
 
 ### Prevent Duplicate Callback Requests Using a Subflow
+>
 
-
-
-
-
-<!-- ### Multiple Lines of Business Using Variable Wait Treatment?? (Subflow + Functions) -->
-
-
-### Multiple Languages Using the Same Flow ( Functions + JSON Variables )
 

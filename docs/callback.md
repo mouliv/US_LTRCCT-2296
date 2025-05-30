@@ -14,22 +14,64 @@
 
 
 ## Build
-### when you are adding something to the canvas 
-> list the fields and values
->
-> list instructions like node connections
+### Open flow <copy>CL<w class="POD"></w>_core</copy>
+> Toggle the Edit switch on
 >
 ---
 
-### when you are adding something to the canvas 
-> list the fields and values
+### Replace the CBchoice node with a Case node
+> Click on the CBchoice and delete it.
 >
-> list instructions like node connections
+> Add a new Case node
 >
+>> Activity Label: <copy>CBchoice</copy>
+>>
+>> Select Build Expression
+>>
+>> Value: <copy>true</copy>
+>>
+>> In the Link Description section:
+>>>
+>>> Replace Case 0 with: <copy>{{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch"}}</copy>
+>>>
+>>> Replace Case 1 with: <copy>{{cbChoice}}</copy>
+>
+> Connect the output node from the Subflow node to to input node edge of this node
+>
+> Connect the {{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch"}} node edge to the Disconnect Contact node
+>
+> Connect the {{cbChoice}} node edge to the Callback node
+>
+> Connect the Default node edge to the Play Music node
+>
+> ??? Note "If you have previously completed the Multiple Lines of Business Using the Same Flow lab"    
+    > TO BE UPDATED SOON
+    >
+    > Delete the connection from the Play Message node which is connected to the True node edge of the Condition node
+    >
+    > Connect the Play Message node which is connected to the True node edge of the Condition node to the Subflow node
+>
+> ??? Note "If you have NOT previously completed the Multiple Lines of Business Using the Same Flow lab"    
+    > Delete the connection from the Play Message node which is connected to the True node edge of the Condition node
+    >
+    > Connect the Play Message node which is connected to the True node edge of the Condition node to the Subflow node
+>
+
+
+
+
+
 ---
 
+??? Note "Check your flow If you have previously completed the Multiple Lines of Business Using the Same Flow lab"    
+    ![](./assets/cbWithOutMultLOB.png)
 
-### <details><summary>Check your flow</summary>![](./assets/LARwCSAT.png)</details>
+
+??? Note "Check your flow If you have NOT previously completed the Multiple Lines of Business Using the Same Flow lab"    
+    ![](./assets/cbWithOutMultLOB.png)
+
+
+
 
 ---
 
@@ -40,7 +82,7 @@
 >
 > Add a publish note
 >
-> Add Version Label(s): Live 
+> Add Version Label(s): Test 
 >
 > Click Publish Flow
 
@@ -52,7 +94,7 @@
 >
 > Locate your Inbound Channel (you can use the search): <copy><w class="EP"></w></copy>
 >
-> Select the Routing Flow: <copy>CL<w class="POD"></w>_LARwCSAT</copy>
+> Select the Routing Flow: <copy>CL<w class="POD"></w>_core</copy>
 >
 > Select the Version Label: Live
 >
