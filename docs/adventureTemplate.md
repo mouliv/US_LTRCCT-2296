@@ -31,6 +31,8 @@
 
 ### <details><summary>Check your flow</summary>![](./assets/LARwCSAT.png)</details>
 
+---
+
 ### Publish your flow
 > Turn on Validation at the bottom right corner of the flow builder
 >

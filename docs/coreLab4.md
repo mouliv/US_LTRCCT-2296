@@ -67,7 +67,7 @@ In this section of the lab we will continue building and testing together.  We w
 ### Add a Condition node
 > Activity Label: LunchCheck
 >
-> Expression: `{{BusinessHours.WorkingHoursShift_Name == "Lunch"}}`
+> Expression: <copy>`{{BusinessHours.WorkingHoursShift_Name == "Lunch"}}`</copy>
 >
 > Delete the connection between the play welcome message node and the Queue Contact node
 >

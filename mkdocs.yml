@@ -107,6 +107,7 @@ nav:
       - Lab 3: coreLab3.md
       - Lab 4: coreLab4.md
       - Lab 5: coreLab5.md
+      - Understanding JSON: json.md
   - Adventure Section: adventureList.md
       # - Lab Overview: ./main/overview.md
       # - Getting to know your environment: ./main/PreRequisites.md
