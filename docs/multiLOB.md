@@ -76,7 +76,9 @@
 > Connect the output node edge of this node to the play music node
 ---
 
-### Add a variable mapping to the Subflow Node
+### Update the Subflow Node with a new variable mapping
+> Open the Subflow node
+> 
 > Scroll down to the Subflow Input Variables
 >
 > Click Add New
@@ -95,22 +97,76 @@
 
 ---
 
-
-
-### when you are adding something to the canvas 
-> list the fields and values
->
-> list instructions like node connections
->
----
-
-
 ### <details><summary>Check your flow</summary>![](./assets/multiWithCBpart1.png)</details>
 
+### Create a JSON flow variable
+>  Name: <copy>LOBmessages</copy>
+>
+> Type: JSON
+>
+> Default Value: <copy>{}</copy>
 ---
 
-### 
+### Add a new Function node
+> Function Name: LOBwaitMessages
+>
+> Function Version Label: Live
+>
+> Function Input Variables:
+>
+> > Current Flow Variable: <copy>welcomeMenu.OptionEntered</copy>  Function input Variable: <copy>LOB</copy>
+>
+> Output Settings:
+>
+> > Output Variable: <copy>LOBmessages</copy>
+>
+> > Path Expression: <copy>$.messageList</copy>
+>
+> Delete the connection between the serviceQueue node and the Play Music node
+>
+> Connect the serviceQueue node to this Function node
+>
+> Delete the connection between the False node edge of LunchCheck and the Play Music node
+>
+> Connect the False node edge of LunchCheck to this Function node
+>
+> Connect the output node edge of this Function node to the Play Music node
+>
+---
 
+### Add a Play message node
+> Activity Label: <copy>LOBmessages1</copy>
+>
+> Enable Text-To-Speech
+>
+> Select the Connector: Cisco Cloud Text-to-Speech
+>
+> Click the Add Text-to-Speech Message button
+>
+> Delete the Selection for Audio File
+>
+> Text-to-Speech Message: <copy>{{LOBmessages[(counter % (LOBmessages| length))] }}</copy>
+> 
+> Delete the connection between the Set Variable node for the counter and the Condition node
+>
+> Connect the output node edge of Set Variable node to this Play Message node
+>
+> Connect the output node edge of this Play Message node to the Condition node
+---
+
+### Delete the old Play Message nodes
+> Delete both play message nodes which were previously used for the alternating messages
+>
+> Connect the True node edge of the Condition node to the Subflow node
+>
+> Connect the False node edge of the Condition node to the Play Music node
+---
+
+### <details><summary>Check your flow</summary>![](./assets/multiWithCBpart2.png)</details>
+
+
+
+---
 
 
 ### Publish your flow
@@ -120,7 +176,7 @@
 >
 > Add a publish note
 >
-> Add Version Label(s): Live 
+> Add Version Label(s): Test 
 >
 > Click Publish Flow
 
@@ -132,9 +188,9 @@
 >
 > Locate your Inbound Channel (you can use the search): <copy><w class="EP"></w></copy>
 >
-> Select the Routing Flow: <copy>CL<w class="POD"></w>_LARwCSAT</copy>
+> Select the Routing Flow: <copy>CL<w class="POD"></w>_core</copy>
 >
-> Select the Version Label: Live
+> Select the Version Label: Test
 >
 > Click Save in the lower right corner of the screen
 
@@ -144,8 +200,7 @@
 
 ## Testing
 1. Launch the [Agent Desktop](https://desktop.wxcc-us1.cisco.com/) and log in using the Desktop option.
-2. list the streps
-      1. double indent sub steps or sections
+2. Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
 3. 
 
 

@@ -32,7 +32,7 @@ In this section of the lab you are going to choose your own adventure from the l
 >
 
 
-### Prevent Duplicate Callback Requests Using a Subflow
+### [Prevent Duplicate Callback Requests Using a Subflow](dupCheck.md)
 >
 
 
