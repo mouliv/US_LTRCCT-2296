@@ -164,6 +164,13 @@ In this section of the lab we will continue building and testing together.  We w
 1. Launch the [Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="_blank"} and log in selecting the Desktop option for your Voice connection (If it is not still open).
 2. On your Agent Desktop, make sure your status is not set to Available
       1. Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
+      2. Elect to receive a callback
+      3. After the call ends, set your status to Available
+      4. Answer the call in the Agent Desktop
+      5. Answer the call in the Webex
+      6. End the call
+      7. Wrap up the call
+      8. Set your status to not Available
 
 
 ---
