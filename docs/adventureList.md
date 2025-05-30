@@ -8,8 +8,13 @@ In this section of the lab you are going to choose your own adventure from the l
 ### [Dial-A-Dad-Joke](dadJoke.md)
 > Not every learning exercise needs to be overly serious.  This exercise is a fun way to explore the basics of and http request, JSON, text-to-speech, and basic flow logic, all while getting a little giggle.
 
-### Multiple Lines of Business Using the Same Flow??
-> 
+
+### [Offering a Callback option to calls actively waiting in the queue](callback.md)
+> If your wait times are longer than your caller wants to listen to your hold music for, you can offer to hold their place in the queue and call them back when it is their turn.  In this lab you will be adding the callback functionality to the CL<w class="POD"></w>_core</copy> flow.
+
+
+### [Multiple Lines of Business Using the Same Flow](multiLOB.md)
+> You do not always need to create a new flow for each line of business in the contact center, instead you can often reuse your flow logic and account for the differences including different queues and wait treatments.  In this lab you will be adding a new line of business to the CL<w class="POD"></w>_core</copy> flow.
 
 ### [Routing Returning Callers](returningCaller.md)
 > When a customer calls back into the contact center within ten minutes of their last call ending, we can assume there was a dropped call, missed callback, or they need additional assistance from their last interaction. We are going to prioritize their call in the queue so that they can finish their business.
