@@ -23,7 +23,7 @@
 >
 > Add a new Menu node
 > >
-> > Activity Label: welcomeMenu
+> > Activity Label: <copy>welcomeMenu</copy>
 > >
 > > Enable Text-To-Speech
 > 
@@ -41,9 +41,9 @@
 >
 > > Select Make Prompt Interruptible
 >
-> > Digit Number: 1 Link Description: Sales
+> > Digit Number: 1 Link Description: <copy>Sales</copy>
 >
-> > Digit Number: 2 Link Description: Service
+> > Digit Number: 2 Link Description: <copy>Service</copy>
 >
 > > Connect the No-Input Timeout node edge to the input node edge of this node
 >
@@ -76,28 +76,32 @@
 > Connect the output node edge of this node to the play music node
 ---
 
-### Update the Subflow Node with a new variable mapping
-> Open the Subflow node
-> 
-> Scroll down to the Subflow Input Variables
->
-> Click Add New
->
-> Current Flow Variable: <copy>welcomeMenu.OptionEntered</copy>
->
-> Subflow Input Variable: <copy>LOB</copy>
->
----
 
-???+ Note "If you have already completed Offering a Callback option to calls actively waiting in the queue"
+
+??? Note "If you have already completed Offering a Callback option to calls actively waiting in the queue"
+    ### Update the Subflow Node with a new variable mapping
+    > Open the Subflow node
+    > 
+    > Scroll down to the Subflow Input Variables
+    >
+    > Click Add New
+    >
+    > Current Flow Variable: <copy>welcomeMenu.OptionEntered</copy>
+    >
+    > Subflow Input Variable: <copy>LOB</copy>
+    >
+    ---
+    
     ### Edit the first case in the CBchoice node
     > Open the CBchoice node
     >
     > Change the text in the first Link Description from {{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch"}} to <copy>{{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch" and welcomeMenu.OptionEntered == "1"}}</copy>
 
+    ### <details><summary>Check your flow</summary>![](./assets/multiWithCBpart1.png)</details>
+
 ---
 
-### <details><summary>Check your flow</summary>![](./assets/multiWithCBpart1.png)</details>
+
 
 ### Create a JSON flow variable
 >  Name: <copy>LOBmessages</copy>
@@ -133,38 +137,62 @@
 > Connect the output node edge of this Function node to the Play Music node
 >
 ---
+??? Note "If you have already completed Offering a Callback option to calls actively waiting in the queue"
+    ### Add a Play message node
+    > Activity Label: <copy>LOBmessages1</copy>
+    >
+    > Enable Text-To-Speech
+    >
+    > Select the Connector: Cisco Cloud Text-to-Speech
+    >
+    > Click the Add Text-to-Speech Message button
+    >
+    > Delete the Selection for Audio File
+    >
+    > Text-to-Speech Message: <copy>{{LOBmessages[(counter % (LOBmessages| length))] }}</copy>
+    > 
+    > Delete the connection between the Set Variable node for the counter and the Condition node
+    >
+    > Connect the output node edge of Set Variable node to this Play Message node
+    >
+    > Connect the output node edge of this Play Message node to the Condition node
+    ---
 
-### Add a Play message node
-> Activity Label: <copy>LOBmessages1</copy>
->
-> Enable Text-To-Speech
->
-> Select the Connector: Cisco Cloud Text-to-Speech
->
-> Click the Add Text-to-Speech Message button
->
-> Delete the Selection for Audio File
->
-> Text-to-Speech Message: <copy>{{LOBmessages[(counter % (LOBmessages| length))] }}</copy>
-> 
-> Delete the connection between the Set Variable node for the counter and the Condition node
->
-> Connect the output node edge of Set Variable node to this Play Message node
->
-> Connect the output node edge of this Play Message node to the Condition node
----
+    ### Delete the old Play Message nodes
+    > Delete both play message nodes which were previously used for the alternating messages
+    >
+    > Connect the True node edge of the Condition node to the Subflow node
+    >
+    > Connect the False node edge of the Condition node to the Play Music node
+    ---
 
-### Delete the old Play Message nodes
-> Delete both play message nodes which were previously used for the alternating messages
->
-> Connect the True node edge of the Condition node to the Subflow node
->
-> Connect the False node edge of the Condition node to the Play Music node
----
+    ### <details><summary>Check your flow</summary>![](./assets/multiWithCBpart2.png)</details>
 
-### <details><summary>Check your flow</summary>![](./assets/multiWithCBpart2.png)</details>
+??? Note "If you have NOT completed Offering a Callback option to calls actively waiting in the queue"
+    ### Add a Play message node
+    > Activity Label: <copy>LOBmessages1</copy>
+    >
+    > Enable Text-To-Speech
+    >
+    > Select the Connector: Cisco Cloud Text-to-Speech
+    >
+    > Click the Add Text-to-Speech Message button
+    >
+    > Delete the Selection for Audio File
+    >
+    > Text-to-Speech Message: <copy>{{LOBmessages[(counter % (LOBmessages| length))] }}</copy>
+    > 
+    > Delete the Condition node
+    >
+    > Delete both play message nodes which were previously used for the alternating messages
+    >
+    > Connect the output node edge of Set Variable node to this Play Message node
+    >
+    > Connect the output node edge of this Play Message node to the Play Music node
+    ---
 
 
+    ### <details><summary>Check your flow</summary>![](./assets/multiNoCBpart2.png)</details>
 
 ---
 

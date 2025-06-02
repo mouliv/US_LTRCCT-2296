@@ -19,42 +19,88 @@
 >
 ---
 
-### Replace the CBchoice node with a Case node
-> Click on the CBchoice and delete it.
->
-> Add a new Case node
->
->> Activity Label: <copy>CBchoice</copy>
->>
->> Select Build Expression
->>
->> Value: <copy>true</copy>
->>
->> In the Link Description section:
->>>
->>> Replace Case 0 with: <copy>{{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch"}}</copy>
->>>
->>> Replace Case 1 with: <copy>{{cbChoice}}</copy>
->
-> Connect the output node from the Subflow node to to input node edge of this node
->
-> Connect the {{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch"}} node edge to the Disconnect Contact node
->
-> Connect the {{cbChoice}} node edge to the Callback node
->
-> Connect the Default node edge to the Play Music node
->
-> ??? Note "If you have previously completed the Multiple Lines of Business Using the Same Flow lab"    
-    > TO BE UPDATED SOON
+
+
+??? Note "If you have previously completed the Multiple Lines of Business Using the Same Flow lab"    
+    ### Replace the CBchoice node with a Case node
+    > Click on the CBchoice and delete it.
     >
+    > Add a new Case node
+    >
+    >> Activity Label: <copy>CBchoice</copy>
+    >>
+    >> Select Build Expression
+    >>
+    >> Value: <copy>true</copy>
+    >>
+    >> In the Link Description section:
+    >>>
+    >>> Replace Case 0 with: <copy>{{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch" and welcomeMenu.OptionEntered == "1"}}</copy>
+    >>>
+    >>> Replace Case 1 with: <copy>{{cbChoice}}</copy>
+    >
+    > Connect the output node from the Subflow node to to input node edge of this node
+    >
+    > Connect the {{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch"}} node edge to the Disconnect Contact node
+    >
+    > Connect the {{cbChoice}} node edge to the Callback node
+    >
+    > Connect the Default node edge to the Play Music node
+    >
+    ---
+    
+    ### Add a new Condition node
+    > Activity Label: <copy>EvenOddCondition</copy>
+    >
+    > Expression: <copy>{{counter is even}}</copy> 
+    > 
+    > Connect the True Node edge of this Condition node to the Subflow node
+    >
+    > Connect the False node edge of this Condition node to the Play Music Node
+    >
+    > Delete the connection from LOBmessages1 to the Play Music node
+    >
+    > Connect the outbound node edge from LOBmessages1 to the inbound node edge of this Condition node
+    >
+    ??? Note "Check your flow"    
+        ![](./assets/CBWithMulti.png)
+
+
+??? Note "If you have NOT previously completed the Multiple Lines of Business Using the Same Flow lab"    
+    ### Replace the CBchoice node with a Case node
+    > Click on the CBchoice and delete it.
+    >
+    > Add a new Case node
+    >
+    >> Activity Label: <copy>CBchoice</copy>
+    >>
+    >> Select Build Expression
+    >>
+    >> Value: <copy>true</copy>
+    >>
+    >> In the Link Description section:
+    >>>
+    >>> Replace Case 0 with: <copy>{{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch"}}</copy>
+    >>>
+    >>> Replace Case 1 with: <copy>{{cbChoice}}</copy>
+    >
+    > Connect the output node from the Subflow node to to input node edge of this node
+    >
+    > Connect the {{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch"}} node edge to the Disconnect Contact node
+    >
+    > Connect the {{cbChoice}} node edge to the Callback node
+    >
+    > Connect the Default node edge to the Play Music node
+    >
+    ---
+    
+    ### Update these node connections
     > Delete the connection from the Play Message node which is connected to the True node edge of the Condition node
     >
     > Connect the Play Message node which is connected to the True node edge of the Condition node to the Subflow node
->
-> ??? Note "If you have NOT previously completed the Multiple Lines of Business Using the Same Flow lab"    
-    > Delete the connection from the Play Message node which is connected to the True node edge of the Condition node
-    >
-    > Connect the Play Message node which is connected to the True node edge of the Condition node to the Subflow node
+
+    ??? Note "Check your flow"    
+        ![](./assets/cbWithOutMultLOB.png)
 >
 
 
@@ -63,12 +109,7 @@
 
 ---
 
-??? Note "Check your flow If you have previously completed the Multiple Lines of Business Using the Same Flow lab"    
-    ![](./assets/cbWithOutMultLOB.png)
 
-
-??? Note "Check your flow If you have NOT previously completed the Multiple Lines of Business Using the Same Flow lab"    
-    ![](./assets/cbWithOutMultLOB.png)
 
 
 
@@ -96,7 +137,7 @@
 >
 > Select the Routing Flow: <copy>CL<w class="POD"></w>_core</copy>
 >
-> Select the Version Label: Live
+> Select the Version Label: Test
 >
 > Click Save in the lower right corner of the screen
 
@@ -106,8 +147,7 @@
 
 ## Testing
 1. Launch the [Agent Desktop](https://desktop.wxcc-us1.cisco.com/) and log in using the Desktop option.
-2. list the streps
-      1. double indent sub steps or sections
+2. Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
 3. 
 
 
