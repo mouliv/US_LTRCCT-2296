@@ -24,12 +24,16 @@ In this section of the lab you are going to choose your own adventure from the l
 ### [Last Agent Routing Based on (Simulated) Auto CSAT](LARbasedOnCSAT.md)
 > A common request for returning customers calling into a contact center is to work with the last person with which they had a good experience. This may be because they are already familiar with what the customer needs or it may just be that the customer is familiar with the agent and enjoyed their last interaction. With the new Auto CSAT feature in the Webex Contact Center we can automatically account for this request and route to the last agent which had a high Auto CSAT with the customer. 
 
-### Emergency Close
->
+### [ Dynamically Controlling Emergency Flag in Webex Contact Center Using API](Emergency_Flag.md)
+>In this lab, you will learn how to **dynamically record or update an Emergency prompt** in Webex Contact Center (WxCC). This is especially useful during emergency scenarios where a **Supervisor or Administrator** needs to record a new message or update an existing one in real-time — for instance, during a sudden outage or a weather-related closure.
+
+The flow also includes an option to delete an audio file. **However, it is strongly recommended not to delete any prompts during this lab**. The delete option is provided for completeness and for those looking to reuse the same flow in a production environment.
 
 
-### Recording a message to be played in your flow by making an inbound call
->
+### [  Dynamically Controlling Emergency Audio in Webex Contact Center Using API](Emergency_Audio.md)
+>In this lab, you will learn how to **dynamically record or update an Emergency prompt** in Webex Contact Center (WxCC). This is especially useful during emergency scenarios where a **Supervisor or Administrator** needs to record a new message or update an existing one in real-time — for instance, during a sudden outage or a weather-related closure.
+
+The flow also includes an option to delete an audio file. **However, it is strongly recommended not to delete any prompts during this lab**. The delete option is provided for completeness and for those looking to reuse the same flow in a production environment.
 
 
 ### [Prevent Duplicate Callback Requests Using a Subflow](dupCheck.md)
